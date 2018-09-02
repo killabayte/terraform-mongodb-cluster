@@ -25,7 +25,11 @@ mkdir -p /data
 echo '/dev/data/volume1 /data ext4 defaults 0 0' >> /etc/fstab
 mount /data
 
-yum install -y docker
+mkdir -p /data/mongodb_data
+mkdir -p /data/mongodb_logs
+
+yum install -y docker && \
+service docker start && \
 docker pull yaroslavkostyannikov/terraformedmongodb:v0.7 && \
 mkdir -p /data/mongodb_data && mkdir -p /data/mongodb_logs
-docker run -td -p 27017:27017 -p 27018:27018 -p 27019:27019 -v /data/mongodb_data:/var/lib/mongodb -v /tmp/data/mongodb_logs:/var/log/mongodb yaroslavkostyannikov/terraformedmongodb:v0.7
+docker run -td -p 27017:27017 -p 27018:27018 -p 27019:27019 -v /data/mongodb_data:/var/lib/mongodb -v /data/mongodb_logs:/var/log/mongodb yaroslavkostyannikov/terraformedmongodb:v0.7
