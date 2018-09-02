@@ -16,10 +16,10 @@ docker build -t mongodb:v3.4 .
 
 2. Run it on your local machine, remember docker should be installed before
 ```
-mkdir -p /tmp/data/mongodb_logs - create special folder for mongodb logs from container
-mkdir -p /tmp/data/mongodb_data - create special folder for mongodb data from container
+mkdir -p /tmp/data/mongodb_logs
+mkdir -p /tmp/data/mongodb_data
 
-docker run -td -p 27017:27017 -p 27018:27018 -p 27019:27019 -v /tmp/data/mongodb_data:/var/lib/mongodb -v /tmp/data/mongodb_logs:/var/log/mongodb mongodb - And finaly run docker container with mongodb
+docker run -td -p 27017:27017 -p 27018:27018 -p 27019:27019 -v /tmp/data/mongodb_data:/var/lib/mongodb -v /tmp/data/mongodb_logs:/var/log/mongodb mongodb:v3.4
 ```
 "/tmp/data/mongodb_data" and "/tmp/data/mongodb_logs"- this is path on your local machine where you run docker, so be attentive and create manually this folders before run, or just use others, up to you
 
@@ -38,7 +38,7 @@ It will stop and delete all docker containers on local machine
 
 ### Prerequisites
 
-docker-ce: latest
+* docker-ce: latest
 
 ## Deployment
 
@@ -54,8 +54,8 @@ docker push ${DOCKER_HUB_USER_ID}/${YOUR_IMAGE_NAME}:${SPECIAL_TAG}
 docker pull ${DOCKER_HUB_USER_ID}/${YOUR_IMAGE_NAME}:${SPECIAL_TAG}
 mkdir -p /tmp/data/mongodb_logs
 mkdir -p /tmp/data/mongodb_logs
-docker run -td -p 27017:27017 -p 27018:27018 -p 27019:27019 -v /tmp/data/mongodb_data:/var/lib/mongodb -v /tmp/data/mongodb_logs:/var/log/mongodb mongodb
-``` 
+docker run -td -p 27017:27017 -p 27018:27018 -p 27019:27019 -v /tmp/data/mongodb_data:/var/lib/mongodb -v /tmp/data/mongodb_logs:/var/log/mongodb mongodb:v3.4
+```
 Will run docker container from docker.hub on your server
 
 ## The end

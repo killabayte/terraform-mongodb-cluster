@@ -20,13 +20,15 @@ terraform apply "out.terraform"
 ```
 After approximately 10 minutes, your infrastructure will be ready
 ```
-terraform destroy - will destroy all infrastructure what was created by terraform
+terraform destroy
 ``` 
+This will destroy all infrastructure what was created by terraform
+
 ### Prerequisites
 
-Terraform: v0.11.7
-aws-cli: 1.15.71
-docker-ce: latest
+* Terraform: v0.11.7
+* aws-cli: 1.15.71
+* docker-ce: latest
 
 Also make sure you was run "aws configure" and put your special credentials for AWS Account, otherwise you will be need to fill it manually
 
