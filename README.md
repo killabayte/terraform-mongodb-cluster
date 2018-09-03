@@ -7,9 +7,6 @@ This project contain two folder:
 
 ```
 ./docker/README.md - contain all necessary information about docker
-```
-
-```
 ./infrastructure/README.md -contain all necessary information about terraform and aws
 ```
 
