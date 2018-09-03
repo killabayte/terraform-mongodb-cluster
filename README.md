@@ -2,9 +2,8 @@
 
 This project contain two folder: 
 
-docker - this is custom version mongodb on a board, could build as single docker images, see README.md inside
-infrastructure - this is terraform code for aws infrastructure what will create all necessary for mongodb-cluster (VPC, Subnets, IG, NAT, SG, Bastion, 3Mongodb instances based on EC2(t2.micro), Route53), see README.md inside
-
+* docker - this is custom version mongodb on aboard, could de a builded as single docker image, see README.md inside
+* infrastructure - this is terraform code for aws infrastructure what will create all necessary for mongodb-cluster (VPC, Subnets, IG, NAT, SG, Bastion, 3Mongodb instances based on EC2(t2.micro), Route53), see README.md inside
 
 ```
 ./docker/README.md - contain all necessary information about docker
